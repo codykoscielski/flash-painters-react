@@ -1,10 +1,15 @@
 import './App.css';
 
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import Navigation from './components/layout/Navigation';
+
+
 function App() {
   return (
-    <div className="App">
-      <h1>Hello World</h1>
-    </div>
+    <Router>
+      <Navigation />
+    </Router>
   );
 }
 
