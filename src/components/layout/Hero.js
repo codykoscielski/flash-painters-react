@@ -1,9 +1,14 @@
 import React from 'react';
+import LazyHero from 'react-lazy-hero';
+import Background from '../../images/background.JPG';
 
 const Hero = () => {
     return(
-        <header className="hero-section" >
-            <h1>Buy, Sell, Trade Traditional Tattoo Flash</h1>
+        <header>
+            <LazyHero imageSrc={ Background }>
+                <h1 className="hero-h1">Buy, Sell, Trade Tattoo Flash</h1>
+            </LazyHero>
+            <div className="triangle"></div>
         </header>
     );
 }
