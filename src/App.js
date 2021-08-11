@@ -1,9 +1,9 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Container from 'react-bootstrap/Container';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Navigation from './components/layout/Navigation';
+import Footer from './components/layout/Footer';
 import HomePage from './components/pages/HomePage';
 import MarketPage from './components/pages/MarketPage';
 import SplitsPage from './components/pages/SplitsPage';
@@ -22,9 +22,7 @@ function App() {
         <Route exact path='/contact' render={ () => <ContactPage />} />
         <Route exact path='/login' render={ () => <LoginPage />} />
       </Switch>
-
-      <Container>
-      </Container>
+      <Footer />
     </Router>
   );
 }
