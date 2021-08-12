@@ -1,9 +1,10 @@
 import React from 'react'
+import MarketComponent from '../market/MarketComponent'
 
 const MarketPage = () => {
     return (
         <div>
-            <h1>Market Page </h1>
+            <MarketComponent />
         </div>
     )
 }

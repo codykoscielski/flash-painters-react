@@ -2,6 +2,12 @@
     --green: #6A7356;
     --brown: #BFA07A;
     --lightbrown: #D9D1C7;
+
+    /*New colors */
+    --coffeeStain: #e5b98b;
+    --blue: #576082;
+    --red: #ac3922;
+    --black: #272623;
 }
 
 * {
@@ -12,7 +18,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .links {
@@ -97,7 +103,7 @@ body {
 
 /* Footer */
 footer {
-    height: 5vh;
+    height: 10vh;
     width: 100vw;
     background-color: var(--green);
     display: flex;
