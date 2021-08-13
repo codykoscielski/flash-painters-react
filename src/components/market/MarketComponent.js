@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import MarketItem from './MarketItem';
+//DB import from firebase.js
 import db from '../../firebase';
 
 const MarketComponent = () => {
 
     const [paintings, setPaintings] = useState([]);
 
-
     useEffect(() => {
         //Using snapshot method to auto update the DB
-        //DB is the name of the firebase db imported from firebase
         db.collection('paintings').onSnapshot(snapshot => {
             //mapping through each item in the paintings collection
             setPaintings(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()}))) //Getting the ID for mapping
@@ -27,4 +26,4 @@ const MarketComponent = () => {
     )
 }
 
-export default MarketComponent
+export default MarketComponent;
