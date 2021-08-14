@@ -10,21 +10,24 @@ import MarketPage from './components/pages/MarketPage';
 import SplitsPage from './components/pages/SplitsPage';
 import ContactPage from './components/pages/ContactPage';
 import LoginPage from './components/pages/LoginPage';
+import { AuthProvider } from './contexts/AuthContext';
 
 
 function App() {
   return (
-    <Router>
-      <Navigation />
-      <Switch>
-        <Route exact path='/' render={ () => <HomePage />} />
-        <Route exact path='/market' render={ () => <MarketPage />} />
-        <Route exact path='/splits' render={ () => <SplitsPage />} />
-        <Route exact path='/contact' render={ () => <ContactPage />} />
-        <Route exact path='/login' render={ () => <LoginPage />} />
-      </Switch>
-      <Footer />
-    </Router>
+    <AuthProvider>
+      <Router>
+        <Navigation />
+        <Switch>
+          <Route exact path='/' render={ () => <HomePage />} />
+          <Route exact path='/market' render={ () => <MarketPage />} />
+          <Route exact path='/splits' render={ () => <SplitsPage />} />
+          <Route exact path='/contact' render={ () => <ContactPage />} />
+          <Route exact path='/login' render={ () => <LoginPage />} />
+        </Switch>
+        <Footer />
+      </Router>
+    </AuthProvider>
   );
 }
 
