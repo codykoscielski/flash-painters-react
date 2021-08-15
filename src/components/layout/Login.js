@@ -1,35 +1,36 @@
 import React from 'react'
 import { Alert, Button } from 'react-bootstrap';
 import { useAuth } from '../../contexts/AuthContext';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
 
-    const emailRef = useRef();
-    const passwordRef = useRef();
-    const { signup } = useAuth();
-    const [error, setError] = useState('');
-    const [loading, setLoading] = useState(false);
+    // const emailRef = useRef();
+    // const passwordRef = useRef();
+    // const { signup } = useAuth();
+    // const [error, setError] = useState('');
+    // const [loading, setLoading] = useState(false);
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
 
-        if (passwordRef.current.value !== passwordConfirmRef.current.value) {
-            return setError('Password must match');
-        } else if (passwordRef.current.value.length < 6) {
-            return setError('Password must be at least 6 charcters');
-        }
+    //     if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+    //         return setError('Password must match');
+    //     } else if (passwordRef.current.value.length < 6) {
+    //         return setError('Password must be at least 6 charcters');
+    //     }
 
-        try {
-            setError('')
-            setLoading(true)
-            await signup(emailRef.current.value, passwordRef.current.value);
-        } catch {
-            setError('Failed to create account')
-            setLoading(false)
-        }
+    //     try {
+    //         setError('')
+    //         setLoading(true)
+    //         await signup(emailRef.current.value, passwordRef.current.value);
+    //     } catch {
+    //         setError('Failed to create account')
+    //         setLoading(false)
+    //     }
 
         
-    }
+    // }
 
     return (
         <div className="wrapper">
@@ -47,10 +48,10 @@ const Login = () => {
                     </div>
                     <Button className="btn form-btn" type="button">login</Button>
                     <p className="form-text">
-                        <a href="#" className="form-link">Forgot your password?</a>
+                        <a href="test" className="form-link">Forgot your password?</a>
                     </p>
                     <p className="form-text">
-                        <Link className="form-url" href="#" id="createAccount">Don't have an account? Create account</Link>
+                        <Link to='/signup' className="form-url" id="createAccount">Don't have an account? Create account</Link>
                     </p>
                 </form>
             </div>
