@@ -4,32 +4,32 @@ import { useAuth } from '../../contexts/AuthContext';
 
 const Login = () => {
 
-    const emailRef = useRef();
-    const passwordRef = useRef();
-    const { signup } = useAuth();
-    const [error, setError] = useState('');
-    const [loading, setLoading] = useState(false);
+    // const emailRef = useRef();
+    // const passwordRef = useRef();
+    // const { signup } = useAuth();
+    // const [error, setError] = useState('');
+    // const [loading, setLoading] = useState(false);
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
 
-        if (passwordRef.current.value !== passwordConfirmRef.current.value) {
-            return setError('Password must match');
-        } else if (passwordRef.current.value.length < 6) {
-            return setError('Password must be at least 6 charcters');
-        }
+    //     if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+    //         return setError('Password must match');
+    //     } else if (passwordRef.current.value.length < 6) {
+    //         return setError('Password must be at least 6 charcters');
+    //     }
 
-        try {
-            setError('')
-            setLoading(true)
-            await signup(emailRef.current.value, passwordRef.current.value);
-        } catch {
-            setError('Failed to create account')
-            setLoading(false)
-        }
+    //     try {
+    //         setError('')
+    //         setLoading(true)
+    //         await signup(emailRef.current.value, passwordRef.current.value);
+    //     } catch {
+    //         setError('Failed to create account')
+    //         setLoading(false)
+    //     }
 
         
-    }
+    // }
 
     return (
         <div className="wrapper">
@@ -50,7 +50,7 @@ const Login = () => {
                         <a href="#" className="form-link">Forgot your password?</a>
                     </p>
                     <p className="form-text">
-                        <Link className="form-url" href="#" id="createAccount">Don't have an account? Create account</Link>
+                        <a className="form-url" href="#" id="createAccount">Don't have an account? Create account</a>
                     </p>
                 </form>
             </div>
