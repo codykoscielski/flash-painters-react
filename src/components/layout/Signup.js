@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Alert, Button } from 'react-bootstrap';
 import { useAuth } from '../../contexts/AuthContext';
+import { Link } from 'react-router-dom';
 
 const Signup = () => {
 
@@ -48,7 +49,7 @@ const Signup = () => {
                     </div>
                     <Button className="btn form-btn" type="submit" disabled={ loading }>Continue</Button>
                     <p className="form-text">
-                        <a className="form-url" href="google.com" id="linkLogin">Already have an account? Sign in</a>
+                        <Link to='/login' className="form-url" id="linkLogin">Already have an account? Sign in</Link>
                     </p>
                 </form>
             </div>

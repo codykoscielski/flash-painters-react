@@ -9,7 +9,8 @@ import HomePage from './components/pages/HomePage';
 import MarketPage from './components/pages/MarketPage';
 import SplitsPage from './components/pages/SplitsPage';
 import ContactPage from './components/pages/ContactPage';
-import LoginPage from './components/pages/LoginPage';
+import Login from './components/layout/Login';
+import Signup from './components/layout/Signup';
 import { AuthProvider } from './contexts/AuthContext';
 
 
@@ -23,7 +24,8 @@ function App() {
           <Route exact path='/market' render={ () => <MarketPage />} />
           <Route exact path='/splits' render={ () => <SplitsPage />} />
           <Route exact path='/contact' render={ () => <ContactPage />} />
-          <Route exact path='/login' render={ () => <LoginPage />} />
+          <Route exact path='/login' component={ Login } />
+          <Route exact path='/signup' component={ Signup } />
         </Switch>
         <Footer />
       </Router>
