@@ -11,6 +11,7 @@ import SplitsPage from './components/pages/SplitsPage';
 import ContactPage from './components/pages/ContactPage';
 import Login from './components/layout/Login';
 import Signup from './components/layout/Signup';
+import UserPortal from './components/pages/UserPortal';
 import { AuthProvider } from './contexts/AuthContext';
 
 
@@ -20,12 +21,13 @@ function App() {
       <Router>
         <Navigation />
         <Switch>
-          <Route exact path='/' render={ () => <HomePage />} />
-          <Route exact path='/market' render={ () => <MarketPage />} />
-          <Route exact path='/splits' render={ () => <SplitsPage />} />
-          <Route exact path='/contact' render={ () => <ContactPage />} />
-          <Route exact path='/login' component={ Login } />
-          <Route exact path='/signup' component={ Signup } />
+          <Route exact path='/' component={ HomePage } />
+          <Route path='/market' component={ MarketPage } />
+          <Route path='/splits' component={ SplitsPage } />
+          <Route path='/contact' component={ ContactPage } />
+          <Route path='/login' component={ Login } />
+          <Route path='/signup' component={ Signup } />
+          <Route path='/userportal'component={ UserPortal } />
         </Switch>
         <Footer />
       </Router>
