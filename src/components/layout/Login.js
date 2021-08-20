@@ -36,12 +36,12 @@ const Login = () => {
                     <h1 className="form-title">Login</h1>
                     <div className="form-message form-error"></div>
                     <div className="input-group">
-                        <input type="text" className="form-input" autofocus placeholder="Username email" ref={ emailRef } /> 
+                        <input type="text" className="form-input" autoFocus placeholder="Username email" ref={ emailRef } /> 
                         <div className="input-group"></div>
                     </div>
                     <div className="input-group">
-                        <input type="password" className="form-input" autofocus placeholder="Password"  ref={ passwordRef } />
-                        <div class="form-input-errormessage"></div>
+                        <input type="password" className="form-input" autoFocus placeholder="Password"  ref={ passwordRef } />
+                        <div className="form-input-errormessage"></div>
                     </div>
                     <Button className="btn form-btn" type="submit" disabled={ loading }>Continue</Button>
                     <p className="form-text">
