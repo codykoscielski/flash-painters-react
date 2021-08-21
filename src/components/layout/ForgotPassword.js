@@ -28,6 +28,8 @@ const ForgotPassword = () => {
         
     }
 
+    //fake email: basogi8555@kibwot.com
+
     return (
         <div className="wrapper">
             {error && <Alert variant="danger">{ error }</Alert>}

@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 
 import Navigation from './components/layout/Navigation';
 import Footer from './components/layout/Footer';
@@ -14,6 +14,7 @@ import Signup from './components/layout/Signup';
 import UserPortal from './components/pages/UserPortal';
 import ForgotPassword from './components/layout/ForgotPassword';
 import PrivateRoute from './PrivateRoute';
+import UpdateProfile from './components/layout/UpdateProfile';
 import { AuthProvider } from './contexts/AuthContext';
 
 
@@ -31,6 +32,8 @@ function App() {
           <Route path='/signup' component={ Signup } />
           <Route path ='/forgotpassword' component={ ForgotPassword } />
           <PrivateRoute exact path='/userportal'component={ UserPortal } />
+          <PrivateRoute exact path='/updateprofile' component={ UpdateProfile } />
+          <Redirect to='/' />
         </Switch>
         <Footer />
       </Router>
