@@ -12,6 +12,7 @@ import ContactPage from './components/pages/ContactPage';
 import Login from './components/layout/Login';
 import Signup from './components/layout/Signup';
 import UserPortal from './components/pages/UserPortal';
+import ForgotPassword from './components/layout/ForgotPassword';
 import PrivateRoute from './PrivateRoute';
 import { AuthProvider } from './contexts/AuthContext';
 
@@ -28,6 +29,7 @@ function App() {
           <Route path='/contact' component={ ContactPage } />
           <Route path='/login' component={ Login } />
           <Route path='/signup' component={ Signup } />
+          <Route path ='/forgotpassword' component={ ForgotPassword } />
           <PrivateRoute exact path='/userportal'component={ UserPortal } />
         </Switch>
         <Footer />
