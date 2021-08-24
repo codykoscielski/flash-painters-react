@@ -20,19 +20,27 @@ const UserCard = () => {
         }
     }
 
-    return (
-        <Card>
-            <Card.Body>
-                <h2 className="text-center mb-4">Profile</h2>
-                {error && <Alert variant="danger">{ error }</Alert>}
-                <strong>Email:</strong> {currentUser.email}
-                <Link to='/updateprofile' className="btn btn-primary w-100">Update Profile</Link>
-            </Card.Body>
-            <div className="w-100 text-center mt-2">
-                <Button className="btn btn-danger" onClick={ handleLogout }>Log Out</Button>
-            </div>
-        </Card>
-    )
+    if(currentUser.displayName) {
+        return (
+            <Card>
+                <Card.Body>
+                    <h2 className="text-center mb-4">Profile</h2>
+                    {error && <Alert variant="danger">{ error }</Alert>}
+                    <strong>Email:</strong> {currentUser.email}
+                    <strong>Name:</strong> {currentUser.displayName}
+                    <Link to='/updateprofile' className="btn btn-primary w-100">Update Profile</Link>
+                </Card.Body>
+                <div className="w-100 text-center mt-2">
+                    <Button className="btn btn-danger" onClick={ handleLogout }>Log Out</Button>
+                </div>
+            </Card>
+        )
+    } else {
+        return (
+            <h1> loading </h1>
+        )
+    }
+
 }
 
 export default UserCard

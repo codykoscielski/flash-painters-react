@@ -13,7 +13,15 @@ export const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
 
     const signup = (email, password) => {
-        return auth.createUserWithEmailAndPassword(email, password)       
+        return auth.createUserWithEmailAndPassword(email, password)
+    }
+
+    const updateNewUser = (displayName) => {
+        const user = auth.currentUser
+        
+        user.updateProfile({
+            displayName: displayName
+        })
     }
 
     const login = (email, password) => {
@@ -40,6 +48,7 @@ export const AuthProvider = ({ children }) => {
     const value = {
         currentUser,
         signup,
+        updateNewUser,
         login,
         logout,
         resetPassword
