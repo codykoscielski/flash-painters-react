@@ -6,7 +6,6 @@ import { Link, useHistory } from 'react-router-dom';
 const Signup = () => {
 
     const emailRef = useRef();
-    const displayNameRef = useRef();
     const passwordRef = useRef();
     const passwordConfirmRef = useRef();
     const { signup } = useAuth();
@@ -43,9 +42,6 @@ const Signup = () => {
                     <h1 className="form-title">Register Account</h1>
                     <div className="input-group">
                         <input type="text" className="form-input"  placeholder="Email Address" ref={ emailRef } required/>
-                    </div>
-                    <div className="input-group">
-                        <input type="text" className="form-input"  placeholder="Display Name" ref={ displayNameRef } required/>
                     </div>
                     <div className="input-group">
                         <input type="password" className="form-input"  placeholder="Password" ref={ passwordRef } required/>

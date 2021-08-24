@@ -1,29 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import UserCard from '../userComponents/UserCard';
-import { Card, Button, Alert } from 'react-bootstrap';
-import { useAuth } from '../../contexts/AuthContext';
-import { Link, useHistory } from 'react-router-dom';
+import Post from '../userComponents/Post';
 
 const UserPortal = () => {
 
-    const [error, setError] = useState('');
-    const { currentUser, logout } = useAuth();
-    const history = useHistory();
-
-    const handleLogout = async () => {
-        setError('');
-
-        try {
-            await logout();
-            history.pushState('/login');
-        } catch {
-            setError('Failed to log out');
-        }
-    }
-
     return (
-        <div className="container">
+        <div className="container wrapper">
             <UserCard />
+            <Post />
         </div>
     )
 }
