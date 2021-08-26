@@ -61,9 +61,6 @@ const Post = () => {
                             required
                         />
                     </div>
-                    {/* <div className="input-group">
-                        <textarea className="form-input" placeholder="Description" ref={ descRef } />
-                    </div> */}
                     <Button className="btn form-btn" type="submit">Post</Button> 
                 </form>
             </div>
