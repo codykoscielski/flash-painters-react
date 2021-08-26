@@ -11,29 +11,29 @@ const UpdateProfile = () => {
     const { currentUser } = useAuth();
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
-    const history = useHistory();
+    // const history = useHistory();
 
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
+    // // const handleSubmit = async (e) => {
+    // //     e.preventDefault();
 
-    //     if (passwordRef.current.value !== passwordConfirmRef.current.value) {
-    //         return setError('Password must match');
-    //     } else if (passwordRef.current.value.length < 6) {
-    //         return setError('Password must be at least 6 charcters');
-    //     }
+    // //     if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+    // //         return setError('Password must match');
+    // //     } else if (passwordRef.current.value.length < 6) {
+    // //         return setError('Password must be at least 6 charcters');
+    // //     }
 
-    //     try {
-    //         setError('')
-    //         setLoading(true)
-    //         await signup(emailRef.current.value, passwordRef.current.value);
-    //         history.push('/userportal')
-    //     } catch {
-    //         setError('Failed to create account')
-    //         setLoading(false)
-    //     }
+    // //     try {
+    // //         setError('')
+    // //         setLoading(true)
+    // //         await signup(emailRef.current.value, passwordRef.current.value);
+    // //         history.push('/userportal')
+    // //     } catch {
+    // //         setError('Failed to create account')
+    // //         setLoading(false)
+    // //     }
 
         
-    // }
+    // // }
     return (
         <div className="wrapper">
             {error && <Alert variant="danger">{ error }</Alert>}
