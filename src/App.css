@@ -21,6 +21,17 @@ body {
     overflow-x: hidden;
 }
 
+/* Market box */
+.market-box {
+    min-height: calc(100vh - 82px);
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .btn {
     outline: none;
     border: none;

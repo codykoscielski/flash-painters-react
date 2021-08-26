@@ -20,7 +20,7 @@ const UserCard = () => {
         }
     }
 
-    if(currentUser.displayName) {
+
         return (
             <Card>
                 <Card.Body>
@@ -35,11 +35,7 @@ const UserCard = () => {
                 </div>
             </Card>
         )
-    } else {
-        return (
-            <h1> loading </h1>
-        )
-    }
+
 
 }
 

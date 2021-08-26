@@ -17,7 +17,7 @@ const MarketComponent = () => {
     }, []);
 
     return (
-        <div>
+        <div className="market-box">
             {/* Mapping over each painting and seeing it as a prop to marketitem */}
             {paintings.map((painting) => (
                 <MarketItem  key={ painting.id } painting={ painting } />

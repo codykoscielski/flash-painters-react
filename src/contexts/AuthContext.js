@@ -18,8 +18,9 @@ export const AuthProvider = ({ children }) => {
 
     const updateNewUser = (displayName) => {
         const user = auth.currentUser
-        
+
         user.updateProfile({
+            
             displayName: displayName
         })
     }

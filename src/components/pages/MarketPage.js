@@ -3,7 +3,7 @@ import MarketComponent from '../market/MarketComponent'
 
 const MarketPage = () => {
     return (
-        <div>
+        <div className="container">
             <MarketComponent />
         </div>
     )
