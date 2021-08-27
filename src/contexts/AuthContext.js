@@ -20,7 +20,6 @@ export const AuthProvider = ({ children }) => {
         const user = auth.currentUser
 
         user.updateProfile({
-            
             displayName: displayName
         })
     }

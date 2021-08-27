@@ -4,7 +4,7 @@ import About from '../layout/About'
 
 const HomePage = () => {
     return(
-        <div>
+        <div className="homePage">
             <Hero />
             <About />
         </div>

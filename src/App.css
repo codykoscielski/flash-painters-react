@@ -20,10 +20,21 @@ body {
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
 }
+/*Place holder height for
+components that have no been created yet */
+
+.minHeight {
+    min-height: calc(100vh - 138px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--coffeeStain);
+}
 
 /* Market box */
 .market-box {
-    min-height: calc(100vh - 82px);
+    min-height: calc(100vh - 138px);
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -58,6 +69,10 @@ body {
     width: 300px;
     box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
     border-radius: 3px;
+}
+
+.homePage {
+    min-height: calc(100vh - 138px);
 }
 
 /* About Component */
