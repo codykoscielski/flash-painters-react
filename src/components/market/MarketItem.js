@@ -4,9 +4,7 @@ import Button from 'react-bootstrap/Button';
 import { useAuth } from '../../contexts/AuthContext';
 
 const MarketItem = ({painting: { title, artistName, price }}) => {
-
-    const { currentUser } = useAuth();
-
+    
     return (
         <Card style={{ width: '18rem' }}>
             <Card.Body>

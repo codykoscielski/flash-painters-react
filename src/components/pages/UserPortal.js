@@ -5,7 +5,7 @@ import Post from '../userComponents/Post';
 const UserPortal = () => {
 
     return (
-        <div className="container wrapper">
+        <div className="container user-dashboard">
             <UserCard />
             <Post />
         </div>

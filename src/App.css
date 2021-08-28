@@ -140,6 +140,56 @@ components that have no been created yet */
     border-top: 15px solid var(--green);
 }
 
+/* User Profile Card */
+
+.user-dashboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.user-profile-card {
+    margin: 5% auto;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    min-width: 300px;
+    min-height: 400px;
+    border-radius: 10px;
+    position: relative;
+    background-color: rgba(255,255,255);
+}
+
+.user-profile-card .img-background img {
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+    border: 3px solid rgba(255,255,255);
+    top: 26px;
+    padding: 3px;
+    position: absolute;
+    left: calc(50% - 84px);
+}
+
+.user-profile-card  .img-background {
+    height: 140px;
+    width: 100%;
+    background: rgb(87,96,130);
+    background: linear-gradient(356deg, rgba(87,96,130,0.9430147058823529) 0%, rgba(229,185,139,1) 100%);
+    position: relative;
+    border-radius: 10px 10px 0 0;
+}
+
+.user-profile-card .mid-section {
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    top: 200px;
+    left: 0;
+    padding: 10px 20px 0;
+    background-color: white;
+}
 /* Footer */
 footer {
     height: 82px;
@@ -257,5 +307,9 @@ footer {
 
     .about p {
         font-size: 1.25rem;
+    }
+
+    .user-dashboard {
+        flex-direction: row;
     }
 }

@@ -63,7 +63,7 @@ const Post = () => {
     }
     
     return (
-        <div className="wrapper">
+        <div className="wrapper d-none d-md-flex">
             {error && <Alert variant="danger" show={ visible } onClose={() => setVisible(false)} dismissible >{ error }</Alert>}
             {success && <Alert variant="success" show={ visible } onClose={() => setVisible(false)} dismissible>{ success }</Alert>}
             <div className="form-container">

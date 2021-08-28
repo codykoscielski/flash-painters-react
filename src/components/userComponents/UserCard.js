@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, Button, Alert } from 'react-bootstrap';
+import { Button, Alert } from 'react-bootstrap';
 import { useAuth } from '../../contexts/AuthContext';
 import { Link, useHistory } from 'react-router-dom';
 
@@ -21,17 +21,23 @@ const UserCard = () => {
     }
 
     return (
-        <Card>
-            <Card.Body>
-                <h2 className="text-center mb-4">{currentUser.displayName}</h2>
-                {error && <Alert variant="danger">{ error }</Alert>}
-                <strong>Email:</strong> {currentUser.email} <br />
-                <Link to='/updateprofile' className="btn btn-primary w-100">Update Profile</Link>
-            </Card.Body>
-            <div className="w-100 text-center mt-2">
-                <Button className="btn btn-danger" onClick={ handleLogout }>Log Out</Button>
+        <div className="user-profile-card">
+            {error && <Alert variant="danger">{ error }</Alert>}
+            <div className="img-background">
+                <img 
+                    src="https://firebasestorage.googleapis.com/v0/b/flash-painters.appspot.com/o/IMG_1623.JPG?alt=media&token=4739b253-5182-4dca-99bb-5aa36fceb30e"
+                    className="profile-image"
+                /> 
             </div>
-        </Card>
+            <div className="mid-section">
+                <h3>{ currentUser.displayName }</h3>
+                <p>Email: { currentUser.email }</p>
+                <div className="w-100 mt-2 d-flex justify-content-evenly">
+                    <Button className="btn btn-danger" onClick={ handleLogout }>Log Out</Button>
+                    <Link to='/updateprofile' className="btn btn-primary">Update Profile</Link>
+                </div>
+            </div>
+        </div>
     )
 }
 
