@@ -7,6 +7,7 @@ const Post = () => {
 
     const [title, setTitle] = useState('')
     const [price, setPrice] = useState('')
+    const [url, setUrl] = useState('')
     const [error, setError] = useState('')
     const [file, setFile] = useState(null)
     const [success, setSuccess] = useState('')
@@ -18,10 +19,22 @@ const Post = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
+        console.log('starting upload')
+        const storageRef = storage.ref(file.name)
+
+        storageRef.put(file)
+        .then( async () => {
+            const downloadURL = await storageRef.getDownloadURL();
+            console.log(downloadURL)
+        })
+        .catch((err) => {
+            console.log(err)
+        })
 
         // db.collection("paintings").add({
         //     title: title,
-        //     price: price
+        //     price: price,
+        //     imgURL: url
         // })
         // .then(() => {
         //     setVisible(true)
@@ -36,13 +49,6 @@ const Post = () => {
         //     setPrice('')
         // })
 
-        //Start of upload here
-        console.log('starting upload')
-        console.log(file)
-        const storageRef = storage.ref(file.name)
-        console.log(storageRef)
-
-        storageRef.put(file)
     }
 
     const handleImage = (e) => {

@@ -3,12 +3,14 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { useAuth } from '../../contexts/AuthContext';
 
-const MarketItem = ({painting: { title, artistName, price }}) => {
+const MarketItem = ({painting: { title, imgURL, price }}) => {
+
+    console.log(imgURL)
     
     return (
         <Card style={{ width: '18rem' }}>
             <Card.Body>
-                <Card.Img src="https://firebasestorage.googleapis.com/v0/b/flash-painters.appspot.com/o/IMG_1623.JPG?alt=media&token=4739b253-5182-4dca-99bb-5aa36fceb30e"/>
+                <Card.Img src={ imgURL }/>
                 <Card.Title>{ title }</Card.Title>
                 <Card.Text>${ price }</Card.Text>
                 <Button variant="primary">Buy</Button>
