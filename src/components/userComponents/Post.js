@@ -16,38 +16,30 @@ const Post = () => {
     //Setting the accepted file types
     const types =['image/png', 'image/jpeg']
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         console.log('starting upload')
         const storageRef = storage.ref(file.name)
 
-        storageRef.put(file)
-        .then( async () => {
-            const downloadURL = await storageRef.getDownloadURL();
-            console.log(downloadURL)
+        await storageRef.put(file)
+        db.collection("paintings").add({
+            title: title,
+            price: price,
+            imageURL: await storageRef.getDownloadURL()
         })
-        .catch((err) => {
+        .then(() => {
+            setVisible(true)
+            setSuccess('Post created!')
+            setTitle('')
+            setPrice('')
+        })
+        .catch((err) => { 
             console.log(err)
+            setError('Failed to create post')
+            setTitle('')
+            setPrice('')
         })
-
-        // db.collection("paintings").add({
-        //     title: title,
-        //     price: price,
-        //     imgURL: url
-        // })
-        // .then(() => {
-        //     setVisible(true)
-        //     setSuccess('Post created!')
-        //     setTitle('')
-        //     setPrice('')
-        // })
-        // .catch((err) => { 
-        //     console.log(err)
-        //     setError('Failed to create post')
-        //     setTitle('')
-        //     setPrice('')
-        // })
 
     }
 
@@ -78,7 +70,7 @@ const Post = () => {
                     <div className="input-group">
                         <input type="file" className="form-input" onChange={ handleImage } required  />
                     </div>
-                    {/* <div className="input-group">
+                    <div className="input-group">
                         <input 
                             type="text" 
                             className="form-input"  
@@ -97,7 +89,7 @@ const Post = () => {
                             onChange={(e) => setPrice(e.target.value)}
                             required
                         />
-                    </div> */}
+                    </div>
                     <Button className="btn form-btn" type="submit">Post</Button> 
                 </form>
             </div>
