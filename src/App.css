@@ -144,7 +144,7 @@ components that have no been created yet */
 
 .user-dashboard {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
 }
@@ -155,7 +155,7 @@ components that have no been created yet */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 450px;
     min-width: 300px;
-    min-height: 400px;
+    min-height: 450px;
     border-radius: 10px;
     position: relative;
     background-color: rgba(255,255,255);
