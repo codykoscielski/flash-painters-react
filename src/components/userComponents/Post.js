@@ -1,17 +1,20 @@
 import React, { useState } from 'react'
 import { Alert, Button } from 'react-bootstrap';
 import  db  from '../../firebase';
+import { useAuth } from '../../contexts/AuthContext';
 import { storage }  from '../../firebase';
 
 const Post = () => {
 
     const [title, setTitle] = useState('')
     const [price, setPrice] = useState('')
-    const [url, setUrl] = useState('')
     const [error, setError] = useState('')
     const [file, setFile] = useState(null)
     const [success, setSuccess] = useState('')
     const [visible, setVisible] = useState(false)
+
+    //Grab the current user
+    const { currentUser } = useAuth();
 
     //Setting the accepted file types
     const types =['image/png', 'image/jpeg']
@@ -26,6 +29,7 @@ const Post = () => {
         db.collection("paintings").add({
             title: title,
             price: price,
+            artistName: currentUser.displayName,
             imageURL: await storageRef.getDownloadURL()
         })
         .then(() => {
