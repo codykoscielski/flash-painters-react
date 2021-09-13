@@ -1,3 +1,4 @@
+
 :root {
     --green: #6A7356;
     --brown: #BFA07A;
@@ -42,6 +43,46 @@ components that have no been created yet */
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+/* Market Cards */
+.card-box {
+    font-family: 'Balsamiq Sans', cursive;
+    letter-spacing: 2px;
+    width: 530px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-box img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 17px 2px rgba(0,0,0,0.26); 
+    box-shadow: 0px 0px 17px 2px rgba(0,0,0,0.26);
+    margin-bottom: 5px;
+}
+
+.card-body {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.card-text h4 {
+    text-transform: uppercase;
+}
+
+.card-text p {
+    color: lightgray;
+}
+
+
+/* End Market box styling */
 
 .btn {
     outline: none;
