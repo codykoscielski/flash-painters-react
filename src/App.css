@@ -184,14 +184,14 @@ components that have no been created yet */
 /* User Profile Card */
 
 .user-dashboard {
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
 }
 
 .user-profile-card {
-    margin: 5% auto;
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 450px;

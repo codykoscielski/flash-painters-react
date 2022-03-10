@@ -23,12 +23,7 @@ const UserCard = () => {
     return (
         <div className="user-profile-card">
             {error && <Alert variant="danger">{ error }</Alert>}
-            <div className="img-background">
-                <img 
-                    src="https://firebasestorage.googleapis.com/v0/b/flash-painters.appspot.com/o/IMG_1623.JPG?alt=media&token=4739b253-5182-4dca-99bb-5aa36fceb30e"
-                    className="profile-image"
-                /> 
-            </div>
+            <div className="img-background"></div>
             <div className="mid-section">
                 <h3>{ currentUser.displayName }</h3>
                 <p>Email: { currentUser.email }</p>

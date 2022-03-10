@@ -72,7 +72,7 @@ const Post = () => {
                 <form className="form" id="createAccountForm" onSubmit={ handleSubmit }>
                     <h1 className="form-title">Create Listing</h1>
                     <div className="input-group">
-                        <input type="file" className="form-input" onChange={ handleImage } required  />
+                        <input type="file" className="form-input" onChange={ handleImage } required />
                     </div>
                     <div className="input-group">
                         <input 
@@ -96,6 +96,7 @@ const Post = () => {
                     </div>
                     <Button className="btn form-btn" type="submit">Post</Button> 
                 </form>
+                <p></p>
             </div>
         </div>
     )
