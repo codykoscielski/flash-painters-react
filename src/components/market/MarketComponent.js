@@ -19,9 +19,16 @@ const MarketComponent = () => {
     return (
         <div className="market-box">
             {/* Mapping over each painting and seeing it as a prop to marketitem */}
-            {paintings.map((painting) => (
+
+            {paintings.length > 0 ? paintings.map((painting) => (
                 <MarketItem  key={ painting.id } painting={ painting } />
-            ))}
+            )) : 
+            <div>
+                <h2>Oops...</h2>
+                <p>Sorry bud, It looks like there are currently no paitings</p>
+                <p>Please check back later!</p>
+            </div>
+            }
         </div>
     )
 }
