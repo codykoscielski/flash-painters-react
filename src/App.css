@@ -113,11 +113,12 @@ components that have no been created yet */
 }
 
 .homePage {
-    min-height: calc(100vh - 138px);
+    min-height: calc(100vh - 82px);
 }
 
 /* About Component */
 .about {
+    height: 100vh;
     text-align: center;
     padding: 0 5%;
 }
