@@ -1,7 +1,7 @@
-import React, { useRef, useState } from 'react';
-import { Alert, Button } from 'react-bootstrap';
-import { useAuth } from '../../contexts/AuthContext';
-import { useHistory } from 'react-router-dom';
+import React, { useRef, useState } from 'react'
+import { Alert, Button } from 'react-bootstrap'
+import { useAuth } from '../../contexts/AuthContext'
+import { Link } from 'react-router-dom'
 
 const UpdateProfile = () => {
 
@@ -12,7 +12,6 @@ const UpdateProfile = () => {
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('')
     const [loading, setLoading] = useState(false);
-    const history = useHistory();
 
     const handleUpdate = (e) => {
         e.preventDefault()
@@ -36,7 +35,7 @@ const UpdateProfile = () => {
             setSuccess('Profile updated!')
         })
         .catch(() => {
-            setError("Failed to update account")
+            setError("Failed to update account, please logout and try again.")
         })
         .finally(() => {
             setLoading(false)
@@ -59,7 +58,10 @@ const UpdateProfile = () => {
                     <div className="input-group">
                         <input type="password" className="form-input"   ref={ passwordConfirmRef }/>
                     </div>
-                    <Button className="btn form-btn" type="submit" disabled={ loading }>Continue</Button>
+                    <div className="w-100 mt-2 d-flex justify-content-evenly align-items-center">
+                        <Button className="btn form-btn" type="submit" disabled={ loading }>Update Profile</Button>
+                        {success ? <Link to='/userportal' className="btn btn-primary text-center">Home</Link> : <Link to='/userportal' className="btn btn-primary text-center">Cancel</Link>}
+                    </div>
                 </form>
             </div>
         </div>
