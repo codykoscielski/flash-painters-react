@@ -46,7 +46,6 @@ components that have no been created yet */
 
 /* Market Cards */
 .card-box {
-    font-family: 'Balsamiq Sans', cursive;
     letter-spacing: 2px;
     width: 530px;
     display: flex;
@@ -199,39 +198,12 @@ components that have no been created yet */
     min-width: 300px;
     min-height: 450px;
     border-radius: 10px;
-    position: relative;
     background-color: rgba(255,255,255);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.user-profile-card .img-background img {
-    border-radius: 50%;
-    height: 160px;
-    width: 160px;
-    border: 3px solid rgba(255,255,255);
-    top: 26px;
-    padding: 3px;
-    position: absolute;
-    left: calc(50% - 84px);
-}
-
-.user-profile-card  .img-background {
-    height: 140px;
-    width: 100%;
-    background: rgb(87,96,130);
-    background: linear-gradient(356deg, rgba(87,96,130,0.9430147058823529) 0%, rgba(229,185,139,1) 100%);
-    position: relative;
-    border-radius: 10px 10px 0 0;
-}
-
-.user-profile-card .mid-section {
-    position: absolute;
-    height: 200px;
-    width: 100%;
-    top: 200px;
-    left: 0;
-    padding: 10px 20px 0;
-    background-color: white;
-}
 /* Footer */
 footer {
     height: 82px;

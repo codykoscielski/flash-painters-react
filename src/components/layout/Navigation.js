@@ -23,7 +23,6 @@ const Navigation = () => {
           <Nav className="m-auto">
             <Link to="/" className="nav-link">Home</Link>
             <Link to="/market" className="nav-link">Market</Link>
-            <Link to="/splits" className="nav-link">Splits</Link>
             <Link to="/contact" className="nav-link">Contact Us</Link>
           </Nav>
           <Nav>

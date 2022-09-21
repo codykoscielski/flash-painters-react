@@ -9,11 +9,11 @@ const UserCard = () => {
     const { currentUser, logout } = useAuth();
     const history = useHistory();
     
-    const handleLogout = async () => {
+    const handleLogout = () => {
         setError('');
 
         try {
-            await logout();
+            logout();
             history.pushState('/login');
         } catch {
             setError('Failed to log out');
@@ -23,14 +23,11 @@ const UserCard = () => {
     return (
         <div className="user-profile-card">
             {error && <Alert variant="danger">{ error }</Alert>}
-            <div className="img-background"></div>
-            <div className="mid-section">
-                <h3>{ currentUser.displayName }</h3>
-                <p>Email: { currentUser.email }</p>
-                <div className="w-100 mt-2 d-flex justify-content-evenly">
-                    <Button className="btn btn-danger" onClick={ handleLogout }>Log Out</Button>
-                    <Link to='/updateprofile' className="btn btn-primary">Update Profile</Link>
-                </div>
+            <h3>{ currentUser.displayName }</h3>
+            <p>Email: { currentUser.email }</p>
+            <div className="w-100 mt-2 d-flex justify-content-evenly">
+                <Button className="btn btn-danger" onClick={ handleLogout }>Log Out</Button>
+                <Link to='/updateprofile' className="btn btn-primary">Update Profile</Link>
             </div>
         </div>
     )
