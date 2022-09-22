@@ -53,10 +53,10 @@ const UpdateProfile = () => {
                         <input type="email" className="form-input"  placeholder="Email Address" ref={ emailRef } defaultValue={ currentUser.email } />
                     </div>
                     <div className="input-group">
-                        <input type="password" className="form-input"   ref={ passwordRef }/>
+                        <input type="password" className="form-input" placeholder="New Password"  ref={ passwordRef }/>
                     </div>
                     <div className="input-group">
-                        <input type="password" className="form-input"   ref={ passwordConfirmRef }/>
+                        <input type="password" className="form-input"  placeholder="Confirm Password" ref={ passwordConfirmRef }/>
                     </div>
                     <div className="w-100 mt-2 d-flex justify-content-evenly align-items-center">
                         <Button className="btn form-btn" type="submit" disabled={ loading }>Update Profile</Button>

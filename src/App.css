@@ -117,7 +117,7 @@ components that have no been created yet */
 
 /* About Component */
 .about {
-    height: 100vh;
+    margin-bottom: 10%;
     text-align: center;
     padding: 0 5%;
 }
@@ -253,11 +253,11 @@ footer {
     align-items: center;
     justify-content: center;
     height: 450px;
-    max-width: 375px;
+    max-width: 500px;
     margin: 1rem;
     padding: 2rem;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-    border-radius: 10px
+    border-radius: 10px;    
 }
 .form-hidden {
     display: none;

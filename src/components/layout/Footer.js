@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <footer className="fixed-bottom">
+        <footer >
             <div className="social">
                 <div className="circle">
                     <i className="fab fa-facebook-f"></i>

@@ -4,6 +4,7 @@ import { useAuth } from '../../contexts/AuthContext';
 import { Navbar, Nav } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import { Link } from 'react-router-dom';
+import Logo from '../../images/logo.png'
 
 
 const Navigation = () => {
@@ -15,15 +16,15 @@ const Navigation = () => {
       <Container>
         <Link to="/" className="links">
           <Navbar.Brand >
-            Logo
+            <img src={ Logo } alt="Flash Sheet Sellers Logo" height={ 50 }/>
           </Navbar.Brand>
         </Link>
         <Navbar.Toggle />
         <Navbar.Collapse>
           <Nav className="m-auto">
-            <Link to="/" className="nav-link">Home</Link>
-            <Link to="/market" className="nav-link">Market</Link>
-            <Link to="/contact" className="nav-link">Contact Us</Link>
+            <Link to="/" className="nav-link mx-3">Home</Link>
+            <Link to="/market" className="nav-link mx-3">Market</Link>
+            <Link to="/contact" className="nav-link mx-3">Contact Us</Link>
           </Nav>
           <Nav>
             { currentUser ? <Link to="/userportal" className="btn btn-primary">Profile</Link> : <Link to="/login" className="btn btn-primary">Log In</Link> }
